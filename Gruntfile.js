@@ -106,7 +106,18 @@ module.exports = function(grunt) {
                 'dist/modules/jquery/jquery.js' : ['dist/modules/jquery/jquery.js']
             }
         }
-    }
+    },
+
+    compress: {
+        dist: {
+            options: {
+                archive: ( 'zip/' + pkginfo.name + '-' + pkginfo.version + '.zip')
+            },
+            files: [
+                { expand: true, src: ['app/*', 'dist/**'], dest: ''}
+            ]
+        }
+    },
 
     });
 
