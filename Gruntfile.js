@@ -57,7 +57,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: 'src/js',
-                        src: '**/*.js',
+                        src: '*.js',
                         dest: '.build/js'
                     }
                 ]
@@ -70,7 +70,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: 'src/modules/jquery',
-                        src: '**/*.js',
+                        src: '*.js',
                         dest: '.build/modules/jquery'
                     }
                 ]
@@ -119,9 +119,27 @@ module.exports = function(grunt) {
         }
     },
 
+    watch: {
+        sass: {
+            files: ['src/scss/**/*.scss'],
+            tasks: ['sass'],
+            options: {
+                livereload: true,
+            }
+        },
+        js: {
+            files: ['src/js/**/*.js'],
+            tasks: ['transport','concat','uglify'],
+            options: {
+                livereload: true,
+            }
+        }
+    }
+
     });
 
   // Load the plugin that provides the "uglify" task.
+    //grunt.loadNpmTasks('grunt-contrib-clean');
     grunt.loadNpmTasks('grunt-contrib-sass');
     //grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-cmd-transport');
@@ -138,6 +156,6 @@ module.exports = function(grunt) {
     grunt.registerTask('js', ['transport','concat','uglify']);
     grunt.registerTask('build', ['sass','js']);
     grunt.registerTask('zip', ['compress']);
-    grunt.registerTask('default', ['sass','js','watch']);
+    grunt.registerTask('default', ['build','watch']);
 
 };
