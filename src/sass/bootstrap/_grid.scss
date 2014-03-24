@@ -1,0 +1,35 @@
+//
+// Grid system
+// --------------------------------------------------
+
+
+// Container widths
+//
+// Set the container width, and override it for fixed navbars in media queries.
+
+.container {
+  width: $screen-tablet;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  $padding-tablet;
+  padding-right: $padding-tablet;
+  @include clearfix();
+
+  @media (max-width: $screen) {
+    width: $screen-mobile;
+    padding-left:  $padding-mobile;
+    padding-right: $padding-mobile;
+  }
+}
+
+.container-fluid {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left:  $padding-tablet;
+  padding-right: $padding-tablet;
+  @include clearfix();
+  @media (max-width: $screen) {
+    padding-left:  $padding-mobile;
+    padding-right: $padding-mobile;
+  }
+}

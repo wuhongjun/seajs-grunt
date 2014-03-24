@@ -1,0 +1,84 @@
+//
+// public retina
+// --------------------------------------------------
+
+// topBar
+.topBar{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1030;
+}
+.topBarColor{
+    position: relative;
+    height: 45px;
+    min-width: 320px;
+    background-color: #6f4317;
+}
+.barTitle{
+    font-size: 16px;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+}
+a.backBtn,a.barLog,a.homeBtn{
+    width: 50px;
+    height: 45px;
+    position: absolute;
+    display: block;
+    background: url(http://static.qr.cntv.cn/qr/images/public/barBtn.png) 0 0 no-repeat;
+}
+a.backBtn{
+    background-position: 0 -45px;
+    top: 0;
+    left: 0;
+}
+a.barLog{
+    background-position: 0 -90px;
+    top: 0;
+    right: 0;
+}
+a.homeBtn{
+    background-position: 0 -135px;
+    top: 0;
+    left: 0px;
+}
+
+// uiqr-contain
+.uiqr-container{
+    margin-top: 45px;
+}
+
+// uiqr-footer
+.uiqr-footer{
+    text-align: center;
+    margin: 30px 0px;
+    span{
+        font-size: 20px;
+        padding:0 10px;
+    }
+    @media (max-width: $screen) {
+        margin: 15px 0px;
+        span{
+            font-size: 12px;
+            padding:0 5px;
+        }
+    }
+}
+
+#scrollUp {
+    width: 88px;
+    height: 87px;
+    bottom: 50px;
+    right: 20px;
+    background: url(../images/tablet/backtop.png) 0 0 no-repeat;
+    @media (max-width: $screen) {
+        width: 40px;
+        height: 40px;
+        bottom: 50px;
+        right: 20px;
+        background: url(../images/mobile/backtop.png) 0 0 no-repeat;
+    }
+}

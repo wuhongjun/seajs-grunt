@@ -1,0 +1,18 @@
+//
+// public
+// --------------------------------------------------
+
+// topbar
+a.backBtn,a.barLog,a.homeBtn{
+    background: url(http://static.qr.cntv.cn/qr/images/public/barBtn@2x.png) no-repeat;
+    background-size: 50px 180px;
+}
+a.backBtn{
+    background-position: 0 -45px;
+}
+a.barLog{
+    background-position: 0 -90px;
+}
+a.homeBtn{
+    background-position: 0 -135px;
+}
