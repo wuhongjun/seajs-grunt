@@ -13,7 +13,6 @@ module.exports = function(grunt) {
     sass: {
         dist: {
             options: {
-                banner: '<%= banner %>',
                 style: 'nested'
             },
             files: {
@@ -22,7 +21,6 @@ module.exports = function(grunt) {
         },
         distmin: {
             options: {
-                banner: '<%= banner %>',
                 style: 'compressed',
                 sourcemap: true
             },
@@ -57,7 +55,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: 'src/js',
-                        src: '*.js',
+                        src: '**/*.js',
                         dest: '.build/js'
                     }
                 ]
@@ -70,7 +68,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: 'src/modules/jquery',
-                        src: '*.js',
+                        src: '**/*.js',
                         dest: '.build/modules/jquery'
                     }
                 ]
@@ -83,7 +81,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'dist/js/main.js': ['.build/js/main.js','.build/js/spinning.js'],
+                'dist/js/main.js': ['.build/js/main.js','.build/js/backtop.js'],
                 'dist/modules/jquery/jquery.js': ['.build/modules/jquery/jquery.js']
             }
         }
@@ -121,7 +119,7 @@ module.exports = function(grunt) {
 
     watch: {
         sass: {
-            files: ['src/scss/**/*.scss'],
+            files: ['src/sass/**/*.scss'],
             tasks: ['sass'],
             options: {
                 livereload: true,
@@ -130,6 +128,12 @@ module.exports = function(grunt) {
         js: {
             files: ['src/js/**/*.js'],
             tasks: ['transport','concat','uglify'],
+            options: {
+                livereload: true,
+            }
+        },
+        html: {
+            files: ['app/*.html'],
             options: {
                 livereload: true,
             }
@@ -149,7 +153,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-compress');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    //grunt.loadNpmTasks('grunt-contrib-imagemin');
     //grunt.loadNpmTasks('grunt-banner');
 
     // Default task(s).
