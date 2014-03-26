@@ -1,9 +1,12 @@
 define(function(require) {
 
-  var Spinning = require('./spinning');
+  var backtop = require('./backtop');
 
-  var s = new Spinning('#container');
-  s.render();
+  backtop.init({
+        scrollName: 'scrollUp', // 滚动按钮的ID
+        scrollDistance: 200, //距离顶部的距离
+        zIndex: '1080' //滚动按钮的层级
+  });
 
 });
 

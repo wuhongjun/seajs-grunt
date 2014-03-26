@@ -16,7 +16,23 @@
     line-height: 30px;
     font-size: 12px;
 }
-
+.index-link{
+    margin: 15px 0 10px 0;
+}
+.link-bar{
+    width: 300px;
+    height: 78px;
+    background: url(../images/mobile/talkbar.jpg) 0 0 no-repeat;
+}
+a.link-bar1,a.link-bar2,a.link-bar3{
+    width: 100px;
+    height: 78px;
+    display: block;
+    float: left;
+}
+.index-pray{
+    margin-bottom: 15px;
+}
 .pray-style-l{
     width: 85px;
     float: left;
@@ -70,20 +86,6 @@
     margin-left: -65px;
 }
 
-.index-link{
-    margin: 15px 0px;
-}
-a.link-forum{
-    width: 131px;
-    height: 100px;
-    background: url(../images/mobile/forum.jpg) 0 0 no-repeat
-}
-a.link-video{
-    width: 163px;
-    height: 100px;
-    background: url(../images/mobile/video.jpg) 0 0 no-repeat
-}
-
 .baike-title{
     height: 40px;
     line-height: 40px;
@@ -116,7 +118,7 @@ a.link-video{
         font-size: 14px;
         line-height: 1.3;
         padding-left: 10px;
-        border-left: 2px solid #eba746;
+        border-left: 2px solid #a8ad50;
     }
 }
 
